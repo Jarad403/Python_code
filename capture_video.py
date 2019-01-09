@@ -2,6 +2,7 @@ import requests
 import time
 from bs4 import BeautifulSoup
 import re
+
 def download_image():
     i=1
     for n in range(1,184):
@@ -24,5 +25,7 @@ def download_image():
             time.sleep(3)
             print('第' + str(i)+"个视频下载成功！")
             i += 1
+            
 if __name__ == '__main__':
     download_image()
+    
