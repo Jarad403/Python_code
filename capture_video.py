@@ -22,6 +22,7 @@ def download_image():
             video = requests.get(video_url, headers=headers).content
             with open("E:\\YourGame\\视频\\background\\" + str(i) + ".mp4", 'wb')as f:
                 f.write(video)
+            #抓完一个视频休息三秒    
             time.sleep(3)
             print('第' + str(i)+"个视频下载成功！")
             i += 1
