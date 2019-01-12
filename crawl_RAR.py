@@ -20,9 +20,12 @@ def download_file():
             download_url=body['href']
             #获取下载内容
             result=requests.get(download_url,headers=headers).content
-            with open("E:\\Keep\\"+title+".rar",'wb')as f:
-                f.write(result)
-            print("第"+str(sign)+"份文件"+title+".rar----------下载成功！")
+            try:
+                with open("E:\\Keep\\"+title+".rar",'wb')as f:
+                    f.write(result)
+                print("第"+str(sign)+"份文件"+title+".rar----------下载成功！")
+            except BaseException:
+                pirnt("第"+str(sign)+"份文件"+title+".rar----------下载失败！")
             #反反爬虫睡眠
             time.sleep(3)
             sign=sign+1
