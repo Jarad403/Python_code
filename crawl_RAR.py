@@ -25,7 +25,7 @@ def download_file():
                     f.write(result)
                 print("第"+str(sign)+"份文件"+title+".rar----------下载成功！")
             except BaseException:
-                pirnt("第"+str(sign)+"份文件"+title+".rar----------下载失败！")
+                print("第"+str(sign)+"份文件"+title+".rar----------下载失败！")
             #反反爬虫睡眠
             time.sleep(3)
             sign=sign+1
